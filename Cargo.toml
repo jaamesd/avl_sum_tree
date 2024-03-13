@@ -1,0 +1,7 @@
+[package]
+name = "avl_sum_tree"
+version = "0.1.0"
+authors = ["James Deng <james.deng@alumni.ubc.ca>"]
+
+[dependencies]
+rand = "0.4.2"

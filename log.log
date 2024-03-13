@@ -1,0 +1,59 @@
+
+running 14 tests
+test node::basic_operations ... ok
+test node::delete_left_left ... ok
+test node::delete_left_right ... ok
+test node::delete_center ... ok
+test node::delete_right_left ... ok
+test node::delete_leftmost ... ok
+test node::delete_rightmost ... ok
+test node::insert_left_left ... ok
+test node::insert_left_right ... ok
+test node::insert_right_right ... ok
+test node::insert_right_left ... ok
+test node::refrence_tree ... ok
+test tests::it_works ... ok
+test node::random_walk ... FAILED
+
+failures:
+
+---- node::random_walk stdout ----
+	thread 'node::random_walk' panicked at 'attempt to calculate the remainder with a divisor of zero', src/node.rs:898:12
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+stack backtrace:
+   0: std::sys::imp::backtrace::tracing::imp::unwind_backtrace
+             at src/libstd/sys/unix/backtrace/tracing/gcc_s.rs:49
+   1: std::sys_common::backtrace::_print
+             at src/libstd/sys_common/backtrace.rs:68
+   2: std::panicking::default_hook::{{closure}}
+             at src/libstd/sys_common/backtrace.rs:57
+             at src/libstd/panicking.rs:381
+   3: std::panicking::default_hook
+             at src/libstd/panicking.rs:391
+   4: std::panicking::begin_panic
+             at src/libstd/panicking.rs:577
+   5: std::panicking::begin_panic
+             at src/libstd/panicking.rs:538
+   6: std::panicking::try::do_call
+             at src/libstd/panicking.rs:522
+   7: std::panicking::try::do_call
+             at src/libstd/panicking.rs:498
+   8: <core::ops::range::Range<Idx> as core::fmt::Debug>::fmt
+             at src/libcore/panicking.rs:71
+   9: <core::ops::range::Range<Idx> as core::fmt::Debug>::fmt
+             at src/libcore/panicking.rs:51
+  10: avl_sum_tree::node::random_walk
+             at src/node.rs:898
+  11: <F as test::FnBox<T>>::call_box
+             at src/libtest/lib.rs:1510
+             at /private/tmp/rust-20180104-57561-w43rbz/rustc-1.23.0-src/src/libcore/ops/function.rs:223
+             at src/libtest/lib.rs:142
+  12: panic_unwind::dwarf::eh::read_encoded_pointer
+             at src/libpanic_unwind/lib.rs:101
+
+
+failures:
+    node::random_walk
+
+test result: FAILED. 13 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out
+
